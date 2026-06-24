@@ -27,7 +27,7 @@ const FileUploader = <T extends FieldValues>({
     disabled,
 }: FileUploaderProps<T>) => {
     const inputRef = useRef<HTMLInputElement>(null)
-    const { field, fieldState } = useController({ control, name })
+    const { field } = useController({ control, name })
     const file: File | undefined = field.value
 
     const handleDrop = (e: React.DragEvent) => {
